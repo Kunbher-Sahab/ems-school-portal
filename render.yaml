@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: ems-school-portal
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: "node server.js"
+    healthCheckPath: /health
