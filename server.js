@@ -191,7 +191,6 @@ function serveStatic(req,res,url){
   const types={".html":"text/html; charset=utf-8",".css":"text/css; charset=utf-8",".js":"text/javascript; charset=utf-8",".jpg":"image/jpeg",".jpeg":"image/jpeg",".png":"image/png",".webp":"image/webp",".svg":"image/svg+xml",".ico":"image/x-icon"};
   res.writeHead(200,{"Content-Type":types[ext]||"application/octet-stream"});fs.createReadStream(file).pipe(res);
 }
-
 const server=http.createServer(async(req,res)=>{
   res.setHeader("X-Content-Type-Options","nosniff");
   res.setHeader("X-Frame-Options","SAMEORIGIN");
