@@ -6,7 +6,7 @@ const crypto = require("crypto");
 const { URL } = require("url");
 
 const ROOT = __dirname;
-const PUBLIC = ROOT;
+const PUBLIC = path.join(ROOT, "public");
 const DATA_DIR = path.join(ROOT, "data");
 const DB_FILE = path.join(DATA_DIR, "db.json");
 fs.mkdirSync(DATA_DIR, { recursive: true });
